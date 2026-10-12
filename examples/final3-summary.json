@@ -1,0 +1,17 @@
+{
+  "record_type": "observed_terminal_summary",
+  "provenance": "Transcribed from the user's final-3 terminal output in this conversation; not an exported raw report or a new API run.",
+  "date": "2026-10-12",
+  "run": "final-3",
+  "model_served": "nvidia/nemotron-3-ultra-550b-a55b:free",
+  "human_review": "pending_in_supplied_output",
+  "cases": [
+    {"case_id": "C001", "check": "PASS", "disposition": "EXPLAINED", "root_cause": "TIMING", "balance_difference_inr": 60000, "unresolved_a_inr": 0, "unresolved_b_inr": 0, "model_calls": 1, "input_tokens": 2483, "output_tokens": 1815, "model_seconds": 32.623},
+    {"case_id": "C002", "check": "PASS", "disposition": "EXPLAINED", "root_cause": "ALTERNATE_ID", "balance_difference_inr": 0, "unresolved_a_inr": 0, "unresolved_b_inr": 0, "model_calls": 1, "input_tokens": 2178, "output_tokens": 918, "model_seconds": 22.034},
+    {"case_id": "C003", "check": "PASS", "disposition": "ESCALATE", "root_cause": "DIFFERENT_DEALS", "balance_difference_inr": 0, "unresolved_a_inr": 75000, "unresolved_b_inr": 75000, "model_calls": 1, "input_tokens": 2172, "output_tokens": 1039, "model_seconds": 18.345}
+  ],
+  "structured_cases_passed": 3,
+  "structured_cases_total": 3,
+  "repairs": 0,
+  "scope": "One run on three known synthetic cases; human prose/evidence review remains separate."
+}

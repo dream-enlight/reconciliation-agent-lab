@@ -1,0 +1,38 @@
+[
+  {
+    "case_id": "C001",
+    "record_id": "A-001",
+    "source_id": "L100",
+    "amount_inr": 60000,
+    "customer": "Northstar Foods",
+    "booking_date": "2025-09-29",
+    "settlement_date": "2025-09-29"
+  },
+  {
+    "case_id": "C001",
+    "record_id": "A-002",
+    "source_id": "L101",
+    "amount_inr": 60000,
+    "customer": "Northstar Foods",
+    "booking_date": "2025-09-30",
+    "settlement_date": "2025-10-02"
+  },
+  {
+    "case_id": "C002",
+    "record_id": "A-003",
+    "source_id": "L200",
+    "amount_inr": 50000,
+    "customer": "Harbor Manufacturing",
+    "booking_date": "2025-09-20",
+    "settlement_date": "2025-09-20"
+  },
+  {
+    "case_id": "C003",
+    "record_id": "A-004",
+    "source_id": "L300",
+    "amount_inr": 75000,
+    "customer": "Meridian Retail",
+    "booking_date": "2025-09-22",
+    "settlement_date": "2025-09-22"
+  }
+]

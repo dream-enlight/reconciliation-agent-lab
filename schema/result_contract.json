@@ -1,0 +1,14 @@
+{
+  "case_id": "string",
+  "disposition": "EXPLAINED | ESCALATE",
+  "root_cause": "TIMING | ALTERNATE_ID | DIFFERENT_DEALS | INSUFFICIENT_EVIDENCE",
+  "balance_difference_inr": "integer, A total minus B total",
+  "unresolved_a_inr": "integer >= 0",
+  "unresolved_b_inr": "integer >= 0",
+  "explanation": "short evidence-based string",
+  "evidence_ids": "list of source record, event and link IDs",
+  "procedure_refs": "list of {section_id, version}",
+  "proposed_matches": "list of {a_record_id, b_record_id}",
+  "timing_explanations": "list of {a_record_id, event_id}",
+  "next_action": "string; use NONE when explained"
+}

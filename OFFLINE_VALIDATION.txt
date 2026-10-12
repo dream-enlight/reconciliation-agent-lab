@@ -1,0 +1,25 @@
+test_ambiguous_links_block_even_same_id_matches (__main__.FinalWorkflowTests.test_ambiguous_links_block_even_same_id_matches) ... ok
+test_answer_key_is_not_a_runtime_input (__main__.FinalWorkflowTests.test_answer_key_is_not_a_runtime_input) ... ok
+test_boolean_amounts_and_wrong_case_are_rejected (__main__.FinalWorkflowTests.test_boolean_amounts_and_wrong_case_are_rejected) ... ok
+test_changed_procedures_require_validator_update (__main__.FinalWorkflowTests.test_changed_procedures_require_validator_update) ... ok
+test_changed_sources_block_approval_without_new_model_calls (__main__.FinalWorkflowTests.test_changed_sources_block_approval_without_new_model_calls) ... ok
+test_correct_record_level_proposals_pass_all_three_cases (__main__.FinalWorkflowTests.test_correct_record_level_proposals_pass_all_three_cases) ... ok
+test_cross_process_evaluation_status_and_review (__main__.FinalWorkflowTests.test_cross_process_evaluation_status_and_review) ... ok
+test_different_deals_cannot_be_matched (__main__.FinalWorkflowTests.test_different_deals_cannot_be_matched) ... ok
+test_equal_balances_do_not_hide_unmatched_exposures (__main__.FinalWorkflowTests.test_equal_balances_do_not_hide_unmatched_exposures) ... ok
+test_event_amount_and_status_must_support_timing (__main__.FinalWorkflowTests.test_event_amount_and_status_must_support_timing) ... ok
+test_json_duplicate_keys_and_non_json_numbers_are_rejected (__main__.FinalWorkflowTests.test_json_duplicate_keys_and_non_json_numbers_are_rejected) ... ok
+test_missing_event_blocks_timing_but_allows_explicit_escalation (__main__.FinalWorkflowTests.test_missing_event_blocks_timing_but_allows_explicit_escalation) ... ok
+test_old_links_are_not_current_evidence (__main__.FinalWorkflowTests.test_old_links_are_not_current_evidence) ... ok
+test_one_request_path_and_bounded_repair_reuse_inputs (__main__.FinalWorkflowTests.test_one_request_path_and_bounded_repair_reuse_inputs) ... ok
+test_oversized_explanation_is_repaired_without_preparing_again (__main__.FinalWorkflowTests.test_oversized_explanation_is_repaired_without_preparing_again) ... ok
+test_rows_cannot_be_explained_twice (__main__.FinalWorkflowTests.test_rows_cannot_be_explained_twice) ... ok
+test_snapshot_populations_cannot_include_ineligible_rows (__main__.FinalWorkflowTests.test_snapshot_populations_cannot_include_ineligible_rows) ... ok
+test_transport_failure_does_not_trigger_blind_retry (__main__.FinalWorkflowTests.test_transport_failure_does_not_trigger_blind_retry) ... ok
+test_two_invalid_responses_stop_and_cannot_be_approved (__main__.FinalWorkflowTests.test_two_invalid_responses_stop_and_cannot_be_approved) ... ok
+test_unknown_evidence_and_rule_versions_are_rejected (__main__.FinalWorkflowTests.test_unknown_evidence_and_rule_versions_are_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 3.165s
+
+OK

@@ -1,0 +1,58 @@
+[
+  {
+    "link_id": "LINK-A-L100",
+    "source_system": "A",
+    "source_id": "L100",
+    "economic_deal_id": "D100",
+    "as_of": "2025-09-30",
+    "authority": "Deal Register"
+  },
+  {
+    "link_id": "LINK-B-L100",
+    "source_system": "B",
+    "source_id": "L100",
+    "economic_deal_id": "D100",
+    "as_of": "2025-09-30",
+    "authority": "Deal Register"
+  },
+  {
+    "link_id": "LINK-A-L101",
+    "source_system": "A",
+    "source_id": "L101",
+    "economic_deal_id": "D101",
+    "as_of": "2025-09-30",
+    "authority": "Deal Register"
+  },
+  {
+    "link_id": "LINK-A-L200",
+    "source_system": "A",
+    "source_id": "L200",
+    "economic_deal_id": "D200",
+    "as_of": "2025-09-30",
+    "authority": "Deal Register"
+  },
+  {
+    "link_id": "LINK-B-F900",
+    "source_system": "B",
+    "source_id": "F900",
+    "economic_deal_id": "D200",
+    "as_of": "2025-09-30",
+    "authority": "Deal Register"
+  },
+  {
+    "link_id": "LINK-A-L300",
+    "source_system": "A",
+    "source_id": "L300",
+    "economic_deal_id": "D300",
+    "as_of": "2025-09-30",
+    "authority": "Deal Register"
+  },
+  {
+    "link_id": "LINK-B-F700",
+    "source_system": "B",
+    "source_id": "F700",
+    "economic_deal_id": "D700",
+    "as_of": "2025-09-30",
+    "authority": "Deal Register"
+  }
+]

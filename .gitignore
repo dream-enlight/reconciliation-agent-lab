@@ -1,0 +1,21 @@
+# Local credentials; only the placeholder template is tracked.
+.env
+.env.*
+!.env.example
+
+# Installed environments and Python caches.
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Generated state, vector index, raw reports and operating-system files.
+checkpoints/
+retrieval_db/
+reports/
+*.sqlite
+*.sqlite3
+*.sqlite-wal
+*.sqlite-shm
+.DS_Store

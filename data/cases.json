@@ -1,0 +1,20 @@
+[
+  {
+    "case_id": "C001",
+    "snapshot_date": "2025-09-30",
+    "currency": "INR",
+    "question": "Explain why System A has a larger balance than System B. Establish whether evidence supports a timing explanation."
+  },
+  {
+    "case_id": "C002",
+    "snapshot_date": "2025-09-30",
+    "currency": "INR",
+    "question": "The balances agree, but the identifiers do not match. Can the source rows be reconciled as the same exposure?"
+  },
+  {
+    "case_id": "C003",
+    "snapshot_date": "2025-09-30",
+    "currency": "INR",
+    "question": "The balances and customer names agree, but the identifiers differ. Is it valid to reconcile these rows?"
+  }
+]

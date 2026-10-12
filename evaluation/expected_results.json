@@ -1,0 +1,76 @@
+[
+  {
+    "case_id": "C001",
+    "disposition": "EXPLAINED",
+    "root_cause": "TIMING",
+    "balance_difference_inr": 60000,
+    "unresolved_a_inr": 0,
+    "unresolved_b_inr": 0,
+    "required_evidence_ids": [
+      "A-001",
+      "B-001",
+      "A-002",
+      "EV-101"
+    ],
+    "required_procedure_sections": [
+      "P-TIMING-1",
+      "P-TIMING-2"
+    ],
+    "proposed_matches": [
+      {
+        "a_record_id": "A-001",
+        "b_record_id": "B-001"
+      }
+    ],
+    "timing_explanations": [
+      {
+        "a_record_id": "A-002",
+        "event_id": "EV-101"
+      }
+    ]
+  },
+  {
+    "case_id": "C002",
+    "disposition": "EXPLAINED",
+    "root_cause": "ALTERNATE_ID",
+    "balance_difference_inr": 0,
+    "unresolved_a_inr": 0,
+    "unresolved_b_inr": 0,
+    "required_evidence_ids": [
+      "A-003",
+      "B-002",
+      "LINK-A-L200",
+      "LINK-B-F900"
+    ],
+    "required_procedure_sections": [
+      "P-DEAL-1"
+    ],
+    "proposed_matches": [
+      {
+        "a_record_id": "A-003",
+        "b_record_id": "B-002"
+      }
+    ],
+    "timing_explanations": []
+  },
+  {
+    "case_id": "C003",
+    "disposition": "ESCALATE",
+    "root_cause": "DIFFERENT_DEALS",
+    "balance_difference_inr": 0,
+    "unresolved_a_inr": 75000,
+    "unresolved_b_inr": 75000,
+    "required_evidence_ids": [
+      "A-004",
+      "B-003",
+      "LINK-A-L300",
+      "LINK-B-F700"
+    ],
+    "required_procedure_sections": [
+      "P-DEAL-2",
+      "P-EVIDENCE-2"
+    ],
+    "proposed_matches": [],
+    "timing_explanations": []
+  }
+]

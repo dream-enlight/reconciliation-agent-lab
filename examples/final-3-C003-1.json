@@ -1,0 +1,228 @@
+{
+  "thread_id": "final-3-C003-1",
+  "case_id": "C003",
+  "review_decision": "approve",
+  "validation": {
+    "passed": true,
+    "errors": [],
+    "calculated": {
+      "balance_difference_inr": 0,
+      "unresolved_a_inr": 75000,
+      "unresolved_b_inr": 75000
+    },
+    "prose_review_required": true
+  },
+  "proposal": {
+    "case_id": "C003",
+    "disposition": "ESCALATE",
+    "root_cause": "DIFFERENT_DEALS",
+    "balance_difference_inr": 0,
+    "unresolved_a_inr": 75000,
+    "unresolved_b_inr": 75000,
+    "explanation": "Deal Register links show A source L300 maps to economic_deal_id D300 (LINK-A-L300) and B source F700 maps to D700 (LINK-B-F700). Per P-DEAL-1, different source IDs require current links to the same economic_deal_id to reconcile; they differ. P-DEAL-2 states matching names, amounts, dates cannot establish deal identity when authoritative links confirm different deals. No settlement events exist for timing (P-TIMING-2). Both rows remain unexplained, so unresolved exposures are 75,000 each. Escalate for human to determine if mapping error or distinct deals.",
+    "evidence_ids": [
+      "A-004",
+      "B-003",
+      "LINK-A-L300",
+      "LINK-B-F700"
+    ],
+    "procedure_refs": [
+      {
+        "section_id": "P-DEAL-1",
+        "version": 1
+      },
+      {
+        "section_id": "P-DEAL-2",
+        "version": 1
+      },
+      {
+        "section_id": "P-EVIDENCE-2",
+        "version": 1
+      }
+    ],
+    "proposed_matches": [],
+    "timing_explanations": [],
+    "next_action": "Human to verify whether source IDs L300 and F700 should map to the same economic deal or represent distinct transactions; investigate population mapping."
+  },
+  "prepared_source_digest": "21cba6ff7231541012ea729657a7f6f9c9b7ad39c3935df2eb222351b1147ff3",
+  "evidence_snapshot": {
+    "case": {
+      "case_id": "C003",
+      "snapshot_date": "2025-09-30",
+      "currency": "INR",
+      "question": "The balances and customer names agree, but the identifiers differ. Is it valid to reconcile these rows?"
+    },
+    "population_scope": "Complete supplied A/B populations for this fictional case and snapshot.",
+    "system_a_rows": [
+      {
+        "case_id": "C003",
+        "record_id": "A-004",
+        "source_id": "L300",
+        "amount_inr": 75000,
+        "customer": "Meridian Retail",
+        "booking_date": "2025-09-22",
+        "settlement_date": "2025-09-22"
+      }
+    ],
+    "system_b_rows": [
+      {
+        "case_id": "C003",
+        "record_id": "B-003",
+        "source_id": "F700",
+        "amount_inr": 75000,
+        "customer": "Meridian Retail",
+        "booking_date": "2025-09-22",
+        "settlement_date": "2025-09-22"
+      }
+    ],
+    "balances": {
+      "system_a_total": 75000,
+      "system_b_total": 75000,
+      "difference_a_minus_b": 0
+    },
+    "settlement_events": [],
+    "deal_links": [
+      {
+        "link_id": "LINK-A-L300",
+        "source_system": "A",
+        "source_id": "L300",
+        "economic_deal_id": "D300",
+        "as_of": "2025-09-30",
+        "authority": "Deal Register"
+      },
+      {
+        "link_id": "LINK-B-F700",
+        "source_system": "B",
+        "source_id": "F700",
+        "economic_deal_id": "D700",
+        "as_of": "2025-09-30",
+        "authority": "Deal Register"
+      }
+    ],
+    "lookup_statuses": {
+      "settlement": [
+        {
+          "source_id": "L300",
+          "as_of": "2025-09-30",
+          "status": "NOT_FOUND"
+        }
+      ],
+      "deal": [
+        {
+          "source_system": "A",
+          "source_id": "L300",
+          "as_of": "2025-09-30",
+          "status": "FOUND"
+        },
+        {
+          "source_system": "B",
+          "source_id": "F700",
+          "as_of": "2025-09-30",
+          "status": "FOUND"
+        }
+      ]
+    },
+    "rules": [
+      {
+        "id": "P-TIMING-1:v1",
+        "section_id": "P-TIMING-1",
+        "version": 1,
+        "effective_date": "2025-09-01",
+        "source": "01_timing.md",
+        "text": "Snapshot recognition procedure | version 1\nP-TIMING-1: Recognition dates\nFor this fictional control, System A includes an exposure from its booking date.\nSystem B includes the exposure from its settlement date. Both snapshots include\neligible dates on or before the snapshot date. A transaction booked by the cutoff\nbut settling after it can therefore appear only in A."
+      },
+      {
+        "id": "P-TIMING-2:v1",
+        "section_id": "P-TIMING-2",
+        "version": 1,
+        "effective_date": "2025-09-01",
+        "source": "01_timing.md",
+        "text": "Snapshot recognition procedure | version 1\nP-TIMING-2: Required timing evidence\nA timing explanation requires the A record, the missing B population, and a\ncurrent settlement-event record confirming PENDING at the cutoff with the same\nsource ID, amount and scheduled settlement date. Dates in A alone are insufficient.\nReport the signed A-minus-B difference. Explain it as timing without changing\nrecords or claiming the future settlement has already occurred."
+      },
+      {
+        "id": "P-DEAL-1:v1",
+        "section_id": "P-DEAL-1",
+        "version": 1,
+        "effective_date": "2025-09-01",
+        "source": "02_deal_matching.md",
+        "text": "Economic deal matching procedure | version 1\nP-DEAL-1: Alternate identifiers\nDifferent source identifiers can represent the same exposure. To reconcile them,\nretrieve current Deal Register links for both source system/identifier pairs.\nBoth links must confirm the same economic_deal_id, and the amounts must agree.\nThe link date must equal the case snapshot date. Cite both link IDs and source rows."
+      },
+      {
+        "id": "P-DEAL-2:v1",
+        "section_id": "P-DEAL-2",
+        "version": 1,
+        "effective_date": "2025-09-01",
+        "source": "02_deal_matching.md",
+        "text": "Economic deal matching procedure | version 1\nP-DEAL-2: Misleading similarities\nMatching customer names, amounts, dates or total balances can identify candidates\nbut cannot establish deal identity. If authoritative links confirm different deals,\nthe proposed same-exposure match is invalid. Preserve both unmatched exposures\nand escalate to a human to establish the actual population issue."
+      },
+      {
+        "id": "P-EVIDENCE-1:v1",
+        "section_id": "P-EVIDENCE-1",
+        "version": 1,
+        "effective_date": "2025-09-01",
+        "source": "03_evidence.md",
+        "text": "Evidence and disposition procedure | version 1\nP-EVIDENCE-1: Evidence states\nRecord observable facts and current source references. Distinguish missing evidence\nfrom contradictory evidence. If an essential lookup is absent or unavailable,\nescalate with the missing item identified; do not invent it."
+      },
+      {
+        "id": "P-EVIDENCE-2:v1",
+        "section_id": "P-EVIDENCE-2",
+        "version": 1,
+        "effective_date": "2025-09-01",
+        "source": "03_evidence.md",
+        "text": "Evidence and disposition procedure | version 1\nP-EVIDENCE-2: Amounts and reconciliation\nCalculate balances in code. balance_difference_inr is A total minus B total.\nunresolved_a_inr and unresolved_b_inr are the amounts of source rows still\nunexplained after supported matches or timing explanations. Never substitute a\nzero net balance difference for successful record-level reconciliation.\ndisposition is EXPLAINED or ESCALATE. EXPLAINED requires zero unresolved exposure\non both sides and current support for every proposed explanation."
+      },
+      {
+        "id": "P-EVIDENCE-3:v1",
+        "section_id": "P-EVIDENCE-3",
+        "version": 1,
+        "effective_date": "2025-09-01",
+        "source": "03_evidence.md",
+        "text": "Evidence and disposition procedure | version 1\nP-EVIDENCE-3: Human action\nThe prototype explains and recommends. It does not edit source transactions.\nA human-review pause records the reviewer's decision and next action. Resuming\nthe workflow cannot silently convert an unresolved case to an explained case."
+      }
+    ]
+  },
+  "model_calls": [
+    {
+      "attempt": 1,
+      "kind": "proposal",
+      "model_served": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "finish_reason": "stop",
+      "usage": {
+        "input_tokens": 2172,
+        "output_tokens": 1039,
+        "total_tokens": 3211,
+        "input_token_details": {
+          "cache_read": 0,
+          "cache_creation": 0
+        },
+        "output_token_details": {
+          "reasoning": 586
+        }
+      },
+      "seconds": 18.345,
+      "error": "",
+      "prepared_source_digest": "21cba6ff7231541012ea729657a7f6f9c9b7ad39c3935df2eb222351b1147ff3",
+      "visible_response": "{\n  \"case_id\": \"C003\",\n  \"disposition\": \"ESCALATE\",\n  \"root_cause\": \"DIFFERENT_DEALS\",\n  \"balance_difference_inr\": 0,\n  \"unresolved_a_inr\": 75000,\n  \"unresolved_b_inr\": 75000,\n  \"explanation\": \"Deal Register links show A source L300 maps to economic_deal_id D300 (LINK-A-L300) and B source F700 maps to D700 (LINK-B-F700). Per P-DEAL-1, different source IDs require current links to the same economic_deal_id to reconcile; they differ. P-DEAL-2 states matching names, amounts, dates cannot establish deal identity when authoritative links confirm different deals. No settlement events exist for timing (P-TIMING-2). Both rows remain unexplained, so unresolved exposures are 75,000 each. Escalate for human to determine if mapping error or distinct deals.\",\n  \"evidence_ids\": [\"A-004\", \"B-003\", \"LINK-A-L300\", \"LINK-B-F700\"],\n  \"procedure_refs\": [\n    {\"section_id\": \"P-DEAL-1\", \"version\": 1},\n    {\"section_id\": \"P-DEAL-2\", \"version\": 1},\n    {\"section_id\": \"P-EVIDENCE-2\", \"version\": 1}\n  ],\n  \"proposed_matches\": [],\n  \"timing_explanations\": [],\n  \"next_action\": \"Human to verify whether source IDs L300 and F700 should map to the same economic deal or represent distinct transactions; investigate population mapping.\"\n}",
+      "validation": {
+        "passed": true,
+        "errors": [],
+        "calculated": {
+          "balance_difference_inr": 0,
+          "unresolved_a_inr": 75000,
+          "unresolved_b_inr": 75000
+        },
+        "prose_review_required": true
+      }
+    }
+  ],
+  "metrics": {
+    "model_calls": 1,
+    "repair_calls": 0,
+    "input_tokens": 2172,
+    "output_tokens": 1039,
+    "cached_input_tokens": 0,
+    "usage_complete": true,
+    "model_seconds": 18.345
+  },
+  "note": "Implemented v1 checks do not prove unrestricted prose/citation support. Human review remains required."
+}

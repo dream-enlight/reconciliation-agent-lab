@@ -1,0 +1,3 @@
+# Full lesson sequence, including local retrieval.
+-r requirements-core.txt
+chromadb==1.5.9

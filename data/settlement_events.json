@@ -1,0 +1,10 @@
+[
+  {
+    "event_id": "EV-101",
+    "source_id": "L101",
+    "as_of": "2025-09-30",
+    "status": "PENDING",
+    "amount_inr": 60000,
+    "scheduled_settlement_date": "2025-10-02"
+  }
+]
